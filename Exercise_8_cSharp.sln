@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "get_measurement", "get_measurement\get_measurement.csproj", "{BD25EEE6-2EFF-44FA-8F2E-11ED2C750CB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "measurement_server", "measurement_server\measurement_server.csproj", "{D31FE8E6-4383-4C24-B1A8-95D8FA089A2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BD25EEE6-2EFF-44FA-8F2E-11ED2C750CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD25EEE6-2EFF-44FA-8F2E-11ED2C750CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD25EEE6-2EFF-44FA-8F2E-11ED2C750CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D31FE8E6-4383-4C24-B1A8-95D8FA089A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31FE8E6-4383-4C24-B1A8-95D8FA089A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31FE8E6-4383-4C24-B1A8-95D8FA089A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D31FE8E6-4383-4C24-B1A8-95D8FA089A2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
