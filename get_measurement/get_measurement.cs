@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,19 +17,31 @@ namespace get_measurement
 		{
 			IPAddress serverAddress = IPAddress.Parse("10.0.0.1");
 			var udpClient = new UdpClient(PORT);
-			IPEndPoint serverEP = new IPEndPoint(serverAddress, PORT);
 			Console.WriteLine("Client started.");
+
+			IPEndPoint serverEP = new IPEndPoint(serverAddress, PORT);
+			Console.WriteLine("Endpoint established.");
+
+			udpClient.Connect(serverEP);
+			Console.WriteLine("Connected to server.");
+
+			Byte[] recData;
 			switch (args.ToString().ToLower())
 			{
 				case "l":
 					Byte[] sendL = Encoding.ASCII.GetBytes(args[1]);
 					udpClient.Send(sendL, sendL.Length);
-					udpClient.Receive(ref serverEP);
+					recData = udpClient.Receive(ref serverEP);
+					Console.WriteLine(Encoding.ASCII.GetString(recData));
+					Console.ReadKey();
 					break;
 
 				case "u":
 					Byte[] sendU = Encoding.ASCII.GetBytes(args[1]);
 					udpClient.Send(sendU, sendU.Length);
+					recData = udpClient.Receive(ref serverEP);
+					Console.WriteLine(Encoding.ASCII.GetString(recData));
+					Console.ReadKey();
 					break;
 
 				default:

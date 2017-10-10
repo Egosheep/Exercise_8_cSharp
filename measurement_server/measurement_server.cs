@@ -11,7 +11,6 @@ namespace measurement_server
 {
 	class measurement_server
 	{
-
 		const int PORT = 9000;
 
 		private measurement_server()
@@ -41,9 +40,13 @@ namespace measurement_server
 						udpServer.Send(sendUptimeData, sendUptimeData.Length);
 						break;
 
+					default:
+						Console.WriteLine("Received invalid data.");
+						break;
 				}
 			}
 		}
+
 		static void Main(string[] args)
 		{
 			new measurement_server();
