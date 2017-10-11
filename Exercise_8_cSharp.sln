@@ -26,6 +26,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {658ABD47-E71B-46D0-A919-8FCF8C42F267}
+		SolutionGuid = {CD32C4E2-6092-4780-BC31-0B253488AF7D}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = file_server\file_server.csproj
 	EndGlobalSection
 EndGlobal
